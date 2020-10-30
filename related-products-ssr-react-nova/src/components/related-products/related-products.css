@@ -1,0 +1,12 @@
+.label-info {
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 65px;
+    margin-bottom: 20px;
+}
+
+.products_wrap {
+    margin-bottom: 20px;
+}

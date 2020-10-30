@@ -1,0 +1,112 @@
+.product-detail {
+    display: flex;
+    margin: 20px;
+  }
+  
+  .img-wrap {
+    margin-right: 30px;
+  }
+  
+  @media (max-width: 940px) {
+    img {
+      width: 100%;
+    }
+    .product-detail {
+      flex-wrap: wrap;
+    }
+  }
+  .product-name {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  
+  .product-price {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  .btn {
+    background: #333;
+    box-shadow: none;
+    border: none;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .btn-buy {
+    padding: 10px 22px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  .btn-quantity {
+    padding: 8px 12px;
+  }
+  
+  .btn-favorite {
+    padding: 10px 22px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+  
+  .btn-increase {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .btn-decrease {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  
+  .fav-label {
+    margin-left: 10px;
+    cursor: inherit;
+  }
+  
+  .lbl-info {
+    font-size: 20px;
+    margin-bottom: 16px;
+    font-weight: bold;
+  }
+  
+  .input-quantity {
+    -moz-appearance: textfield;
+    background-color: #ffffff;
+    font-size: 15px;
+    min-width: 2em;
+    width: 0;
+    height: auto;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid lightgray;
+  }
+  
+  .product-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    margin-bottom: 16px;
+    border: 1px solid gray;
+  }
+  
+  .lbl-quantity {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .product-quantity-wrap,
+  .product-brand,
+  .product-description {
+    margin-bottom: 16px;
+  }
+  
+  
+  .btn:disabled,
+  .btn[disabled]{
+    background-color: lightgray;
+  }

@@ -1,0 +1,16 @@
+ 
+{
+    "Navbar": {
+      "server": "http://localhost:3001/batch"
+    },
+    "ProductList": {
+      "server": "http://localhost:3002/batch"
+    },
+    "RelatedProducts": {
+        "server": "http://localhost:3003/batch"
+    },
+    "ProductDetail": {
+        "server": "http://localhost:3002/batch"
+    }
+  }
+  

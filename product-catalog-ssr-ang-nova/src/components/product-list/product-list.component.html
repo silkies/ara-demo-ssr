@@ -1,0 +1,53 @@
+<div *ngIf="products ? products.length > 0 : false">
+    <div class="list" >
+        <div class="product-wrap" *ngFor="let product of products | paginate: { itemsPerPage: 20, currentPage: p }">
+            <app-product-card
+            [product]="product"
+            >
+            </app-product-card>
+        </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event" [responsive]="true" class="my-pagination"></pagination-controls>
+</div>
+
+<style>
+    .list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product-wrap {
+  margin: 15px;
+}
+
+:host ::ng-deep .my-pagination .ngx-pagination {
+  padding-left: 0px !important;
+}
+
+:host ::ng-deep .my-pagination .ngx-pagination .current,
+.btn-info {
+  background: #333 !important;
+  border: transparent !important;
+  border-radius: 25px !important;
+  margin: 0px 4px !important;
+}
+
+:host ::ng-deep .my-pagination .ngx-pagination a:hover {
+  border-radius: 20px !important;
+  border: transparent !important;
+}
+
+:host ::ng-deep .my-pagination .ngx-pagination span {
+  width: 28px;
+  height: 28px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+:host ::ng-deep ul {
+  display: flex;
+  justify-content: center;
+}
+
+</style>

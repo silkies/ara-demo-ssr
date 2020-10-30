@@ -1,0 +1,43 @@
+{
+  "name": "related-products-ssr-react-nova",
+  "description": "Another Hypernova React project",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --watch --mode development",
+    "start": "node dist/server.js",
+    "lint": "eslint ./ --ignore-pattern dist/"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
+    "express": "^4.17.1",
+    "hypernova": "^2.5.0",
+    "nova-react": "^1.0.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-items-carousel": "^2.8.0",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^2.0.0",
+    "to-string-loader": "^1.1.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "babel-preset-airbnb": "^4.0.1",
+    "css-loader": "^2.1.1",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "nodemon-webpack-plugin": "^4.0.7",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  }
+}
