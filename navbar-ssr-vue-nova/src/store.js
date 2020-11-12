@@ -3,8 +3,8 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-export function createStore() { 
-  return new Vuex.Store({
+const store = new Vuex.Store({ 
+  
   state: () => ({
     cartProducts: [],
     cartKey: 'CART_PRODUCTS',
@@ -27,6 +27,7 @@ export function createStore() {
 
         })
         state.quantity = quantity;
+        console.log(quantity)
       }
       //Vue.set(state.quantity, quantity)
     }
@@ -36,4 +37,5 @@ export function createStore() {
     
   }
 });
-}
+
+export default store;

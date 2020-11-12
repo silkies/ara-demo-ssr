@@ -1,16 +1,17 @@
 import hypernova from 'hypernova/server'
-import { renderVue, Vue } from 'hypernova-vue/server'
+import { renderVue, Vue, renderVuex } from 'hypernova-vue/server'
 import express from 'express'
 import path from 'path'
 
 import Navbar from './components/Navbar.vue'
+import store from './store';
 
 
 hypernova({
   devMode: process.env.NODE_ENV !== 'production',
   getComponent (name) {
     if (name === 'Navbar') {
-      return renderVue(name, Vue.extend(Navbar))
+      return renderVuex(name, Navbar, store);//renderVue(name, Vue.extend(Navbar))
     }
   },
   port: process.env.PORT || 3001,

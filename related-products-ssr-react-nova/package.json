@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack --watch --mode development",
+    "dev": "webpack --watch --mode development --port 3003",
     "start": "node dist/server.js",
     "lint": "eslint ./ --ignore-pattern dist/"
   },

@@ -3,7 +3,7 @@ import ProductsCarousel from '../carousel/carousel';
 import getRelatedProducts from '../utils/products';
 import { get } from 'lodash';
 import './related-products.css';
-import { StaticRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 class RelatedProducts extends React.Component {
     constructor(props) {
@@ -27,13 +27,13 @@ class RelatedProducts extends React.Component {
          </div>)
         } else
             return (
-                <StaticRouter>
+                <BrowserRouter>
                     <div className="products_wrap">
                         {this.state.products.length > 0
                             ? <div><div className="label-info">Related Products</div><ProductsCarousel products={this.state.products} /></div>
                             : <div className="label-info">No related products</div>}
                     </div>
-                </StaticRouter>
+                </BrowserRouter>
 
             );
     }

@@ -12,19 +12,18 @@ class ProductsCarousel extends React.Component {
 
   componentDidMount() {
     this.setState({products: this.props.products});
-    this.setState({slides: this.createSlides});
-    console.log(this.state.slides);
+    this.setState({slides: this.createSlides()});
 
   }
 
   setNumberOfCards() {
     if (this.state.width < 650) {
       return 1;
-    } else if (width < 930) {
+    } else if (this.state.width < 930) {
       return 2;
-    } else if (width < 1200) {
+    } else if (this.state.width < 1200) {
       return 3;
-    } else if (width < 1400) {
+    } else if (this.state.width < 1400) {
       return 4;
     } else {
       return 5;
@@ -36,15 +35,18 @@ class ProductsCarousel extends React.Component {
   }
 
   createSlides() {
-    this.state.products.map((product) =>
-      <ProductCard product={product} key={product.id} />
+
+    let slides = this.props.products.map((product) => {
+        return <ProductCard product={product} key={product.id} />
+      }
     );
+    return slides;
   } 
   render() {
     return (
       <div style={{ padding: `0 ${65}px` }}>
       <ItemsCarousel
-        numberOfCards={this.setNumberOfCards}
+        numberOfCards={this.setNumberOfCards()}
         showSlither={true}
         firstAndLastGutter={true}
         freeScrolling={false}
@@ -57,7 +59,7 @@ class ProductsCarousel extends React.Component {
         requestToChangeActive={this.changeActiveItem}
         activeItemIndex={this.state.activeItemIndex}
       >
-        {this.state.slides}
+        {this.createSlides()}
       </ItemsCarousel>
     </div>
     );

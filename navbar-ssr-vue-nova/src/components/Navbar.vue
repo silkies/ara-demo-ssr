@@ -18,20 +18,30 @@
 </template>
 
 <script>
-import {createStore} from '../store';
+import { mapGetters, mapActions } from "vuex";
+import store from "../store";
 
-let store = createStore();
 
 export default {
-  computed: {
+  name: "App",
+  data() {
+    return {
+      quantity: this.getQuantity()
+    };
+  },
+  watch: {
     quantity() {
-      return store.state.quantity
+      this.quantity = store.getters.getQuantityInCart;
     }
   },
+  computed: {},
   methods: {
+    getQuantity() {
+      store.dispatch("computeProductsInCart");
+      return store.getters.getQuantityInCart;
+    },
     updateQuantity() {
-      console.log("event heard");
-      return store.dispatch('computeProductsInCart');
+      return store.dispatch("computeProductsInCart");
     }
   },
   mounted() {
